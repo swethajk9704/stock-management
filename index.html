@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STOCK MANAGEMENT</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="login">
+        <h1>STOCK MANAGEMENT</h1>
+        <h2>LOGIN FORM</h2>
+        <input type="text" id="user" placeholder="Username"><br>
+         <input type="password" id="password" placeholder="Password"><br>
+        <button onclick="login()">Login</button>
+        <div class="error" id="errorMsg"></div>
+    </div>
+    <script>
+    function login() {
+        const user = document.getElementById("user").value;
+        const pass = document.getElementById("password").value;
+        const error = document.getElementById("errorMsg");
+
+        if(user === "admin" && pass === "admin@123") {
+            alert("Login Successful!");
+            window.location.href = "product.html";
+        } else {
+            error.textContent = "Invalid username or password!";
+        }
+    }
+</script>
+</body>
+</html>
